@@ -1,20 +1,124 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <title>Nimverta</title>
+    <title>Nimverta | Next-Generation Bone Regeneration</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% tailwind_css %}
 </head>
-<body class="bg-gray-900 flex items-center justify-center h-screen">
-    <div class="text-center">
-        <h1 class="text-5xl font-extrabold text-white">
-            <span class="text-cyan-400">Nimverta</span>
-        </h1>
-        <p class="text-xl mt-4 text-gray-300">
-            A Next-Generation Approach to Bone Regeneration.
-        </p>
-    </div>
+<body class="text-nimverta-dark">
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Your Logo -->
+            <a href="#"><img src="{% static 'images/YOUR_LOGO.svg' %}" alt="Nimverta Logo" class="h-8"></a>
+            
+            <!-- Navigation Links -->
+            <div class="space-x-8 text-lg">
+                <a href="#science" class="hover:text-nimverta-teal">Science</a>
+                <a href="#team" class="hover:text-nimverta-teal">Team</a>
+                <a href="#news" class="hover:text-nimverta-teal">News</a>
+                <a href="#contact" class="hover:text-nimverta-teal">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="bg-nimverta-teal text-white">
+            <div class="container mx-auto px-6 py-24">
+                <h2 class="text-4xl font-bold max-w-3xl">Developing safe and effective long-term therapies for bone disease</h2>
+                <p class="text-xl mt-4 max-w-4xl">
+                    Nimverta is developing a first-in-class peptide therapy that regenerates both bone and its supporting vasculature by leveraging natural physiological pathways, unlocking the potential for safe, long-term treatment.
+                </p>
+            </div>
+        </section>
+
+        <!-- Science Section -->
+        <section id="science" class="bg-white py-20">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="text-4xl font-bold text-nimverta-teal">Our Science</h3>
+                    <p class="mt-4 text-lg">
+                        Age-related bone diseases ignore the crucial vascular environment and lack safe, long-term anabolic options. Nimverta's therapy regenerates not just the bone, but also the critical vascular network that supports it, leading to truly effective and long-lasting results.
+                    </p>
+                </div>
+                <div>
+                    <!-- Replace with your scientific image -->
+                    <img src="{% static 'images/science_image.jpg' %}" alt="Scientific illustration of bone regeneration" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section id="team" class="bg-nimverta-light-gray py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl font-bold mb-12">Our Leadership</h3>
+                <div class="grid md:grid-cols-3 gap-10 text-left">
+                    
+                    <!-- Team Member Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <img src="{% static 'images/amit_singh.jpg' %}" alt="Dr. Amit Singh" class="w-full rounded-md mb-4 filter grayscale">
+                        <h4 class="text-xl font-bold">Dr. Amit Singh</h4>
+                        <p class="text-nimverta-teal font-semibold">Founder & CEO</p>
+                    </div>
+
+                    <!-- Team Member Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <img src="{% static 'images/rob_chisholm.jpg' %}" alt="Rob Chisholm" class="w-full rounded-md mb-4 filter grayscale">
+                        <h4 class="text-xl font-bold">Rob Chisholm</h4>
+                        <p class="text-nimverta-teal font-semibold">Chief Business Officer (CBO)</p>
+                    </div>
+
+                    <!-- Team Member Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <img src="{% static 'images/anjali_kusumbe.jpg' %}" alt="Prof. Anjali Kusumbe" class="w-full rounded-md mb-4 filter grayscale">
+                        <h4 class="text-xl font-bold">Prof. Anjali Kusumbe</h4>
+                        <p class="text-nimverta-teal font-semibold">Chief Scientific Officer (CSO)</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-center mb-12">News</h3>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <!-- News Card -->
+                    <div class="border border-gray-200 rounded-lg p-4 text-center">
+                         <img src="{% static 'images/venture_kick_logo.png' %}" alt="Venture Kick Logo" class="h-20 mx-auto mb-4">
+                         <p>Nimverta wins CHF 10,000 at the first stage of Venture Kick to support market validation and preclinical development.</p>
+                         <p class="text-gray-500 mt-4 text-sm">June 24, 2025</p>
+                    </div>
+                    <!-- Add more news cards here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-nimverta-teal text-white">
+        <div class="container mx-auto px-6 py-12 grid md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-2xl font-bold">Contact</h4>
+                <p class="mt-4">
+                    Nimverta AG<br>
+                    Zurich, Switzerland<br>
+                    <!-- Add your contact email -->
+                    <a href="mailto:info@nimverta.com" class="hover:underline">info@nimverta.com</a>
+                </p>
+            </div>
+            <div class="md:text-right">
+                <p>© 2025 Nimverta AG. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
