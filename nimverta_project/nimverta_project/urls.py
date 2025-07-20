@@ -20,5 +20,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # for non-'admin/' urls go look for instructions in the 'landing_page.urls' file:
     path('', views.home, name='home'),
 ]
