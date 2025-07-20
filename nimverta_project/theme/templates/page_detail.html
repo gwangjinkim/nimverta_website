@@ -2,10 +2,18 @@
 {% load markdownify %}
 
 {% block content %}
-<div class="container mx-auto px-6 py-16">
-    <div class="prose lg:prose-xl max-w-4xl mx-auto">
+<div class="container mx-auto px-6 py-16 lg:py-24">
+
+    <!-- 
+      'prose' enables the typography plugin.
+      'lg:prose-xl' makes the font larger on bigger screens.
+      'max-w-4xl mx-auto' centers the content column.
+    -->
+
+    <article class="prose lg:prose-xl max-w-4xl mx-auto">
         <h1>{{ page.title }}</h1>
         {{ page.content|markdownify|safe }}
-    </div>
+        <!-- The content from your database will go here -->
+    </article>
 </div>
 {% endblock %}
