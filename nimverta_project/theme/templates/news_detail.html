@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load markdownify %}
+
+{% block content %}
+<div class="container mx-auto px-6 py-16 lg:py-24">
+    <article class="prose lg:prose-xl max-w-4xl mx-auto">
+        <h1>{{ article.title }}</h1>
+        <p class="text-gray-500 -mt-4">{{ article.publication_date|date:"F j, Y" }}</p>
+        {{ article.content|markdownify|safe }}
+    </article>
+</div>
+{% endblock %}

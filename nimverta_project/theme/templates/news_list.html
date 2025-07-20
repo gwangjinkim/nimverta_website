@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-6 py-16">
+    <div class="prose lg:prose-xl max-w-4xl mx-auto">
+        <h1>News</h1>
+        <ul>
+            {% for article in articles %}
+                <li>
+                    <a href="{% url 'news_detail' article.slug %}">{{ article.title }}</a>
+                    <span class="text-sm text-gray-500 block">{{ article.publication_date|date:"F j, Y" }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
