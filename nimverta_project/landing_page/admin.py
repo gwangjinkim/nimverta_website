@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Page
+from .models import Page, NewsArticle
 
 @admin.register(Page)
 class PageAdmin(admin.ModelAdmin):
