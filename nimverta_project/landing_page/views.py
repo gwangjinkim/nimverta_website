@@ -14,6 +14,6 @@ def news_list(request):
     articles = NewsArticle.objects.all()
     return render(request, 'news_list.html', {'articles': articles})
 
-def news_details(request, slug):
+def news_detail(request, slug):
     article = get_object_or_404(NewsArticle, slug=slug)
     return render(request, 'news_detail.html', {'article': article})

@@ -9,5 +9,5 @@ class PageAdmin(admin.ModelAdmin):
 
 @admin.register(NewsArticle)
 class NewsArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'publication-date')
+    list_display = ('title', 'slug', 'publication_date')
     prepopulated_fields = {'slug': ('title',)}
