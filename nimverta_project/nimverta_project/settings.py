@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'tailwind',
     'landing_page',
     'theme',
+    'markdownify',
 ]
 
 MIDDLEWARE = [
