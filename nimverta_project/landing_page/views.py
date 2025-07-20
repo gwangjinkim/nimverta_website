@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Page
+from .models import Page, NewsArticle
 
 def home(request):
     # This tells Django to render the 'home.html' template
