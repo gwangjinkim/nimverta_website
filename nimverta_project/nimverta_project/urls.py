@@ -20,3 +20,11 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    # When someone visits the base URL (''), run the home view
+    path('', views.home, name='home'),
+]
