@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # Add these three lines
     'tailwind',
     'landing_page',
-    # 'theme',
+    'theme',
 ]
 
 MIDDLEWARE = [
