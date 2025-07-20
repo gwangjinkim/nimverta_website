@@ -1,38 +1,6 @@
-{% load static tailwind_tags %}
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <title>Nimverta | Next-Generation Bone Regeneration</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% tailwind_css %}
-</head>
-<body class="text-nimverta-dark">
+{% extends "base.html" %}
 
-    <!-- Header -->
-    <header class="sticky top-0 bg-white shadow-md z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Your Logo -->
-            <a href="#" class="flex items-center space-x-3">
-            <a href="#"><img src="{% static 'images/nimverta-logo.svg' %}" alt="Nimverta Logo" class="h-8">
-            
-                <!-- The Company Name, styled with Tailwind -->
-                <span class="text-2xl font-semibold text-nimverta-dark">
-                     Nimverta
-                </span>
-
-            </a>
-            <!-- Navigation Links -->
-            <div class="space-x-8 text-lg">
-                <a href="#science" class="hover:text-nimverta-teal">Science</a>
-                <a href="#team" class="hover:text-nimverta-teal">Team</a>
-                <a href="#news" class="hover:text-nimverta-teal">News</a>
-                <a href="#contact" class="hover:text-nimverta-teal">Contact</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
+{% block content %}
 
         <!-- Hero Section -->
         <section class="bg-nimverta-teal text-white">
@@ -107,25 +75,4 @@
             </div>
         </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact" class="bg-nimverta-teal text-white">
-        <div class="container mx-auto px-6 py-12 grid md:grid-cols-2 gap-8">
-            <div>
-                <h4 class="text-2xl font-bold">Contact</h4>
-                <p class="mt-4">
-                    Nimverta AG<br>
-                    Zurich, Switzerland<br>
-                    <!-- Add your contact email -->
-                    <a href="mailto:info@nimverta.com" class="hover:underline">info@nimverta.com</a>
-                </p>
-            </div>
-            <div class="md:text-right">
-                <p>© 2025 Nimverta AG. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+{% endblock %}

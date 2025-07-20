@@ -1,20 +1,63 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <title>Django Tailwind</title>
+    <title>Nimverta | Next-Generation Bone Regeneration</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% tailwind_css %}
 </head>
+<body class="text-nimverta-dark">
 
-<body class="bg-gray-50 text-black font-serif leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        
+           <!-- Logo block that links to the HOMEPAGE -->
+            <a href="{% url 'home' %}" class="flex items-center space-x-3">
+                <img src="{% static 'images/nimverta-icon.svg' %}" alt="Nimverta Icon" class="h-10">
+                <span class="text-2xl font-semibold text-nimverta-dark">
+                    Nimverta
+                </span>
+            </a>
+        
+            <!-- Correct Navigation Links to Your Pages -->
+            <div class="space-x-8 text-lg">
+                <a href="{% url 'page_detail' 'our-science' %}" class="hover:text-nimverta-teal">Science</a>
+                <a href="{% url 'page_detail' 'about-us' %}" class="hover:text-nimverta-teal">About</a>
+                <a href="{% url 'page_detail' 'investors' %}" class="hover:text-nimverta-teal">Investors</a>
+                <a href="{% url 'page_detail' 'news' %}" class="hover:text-nimverta-teal">News</a>
+                <a href="{% url 'page_detail' 'contact' %}" class="hover:text-nimverta-teal">Contact</a>
+            </div>
+            
+        </nav>
+    </header>
 
-<div class="container mx-auto">
-    <section class="flex items-center justify-center h-screen">
-        <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-    </section>
-</div>
+    <main>
+        {% block content %}
+        <!-- Page-specific content will go here -->
+        
+        {% endblock %}        
+    </main>
+            
+    <!-- Footer -->
+    <footer id="contact" class="bg-nimverta-teal text-white">
+        <div class="container mx-auto px-6 py-12 grid md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-2xl font-bold">Contact</h4>
+                <p class="mt-4">
+                    Nimverta AG<br>
+                    Zurich, Switzerland<br>
+                    <!-- Add your contact email -->
+                    <a href="mailto:info@nimverta.com" class="hover:underline">info@nimverta.com</a>
+                </p>
+            </div>  
+            <div class="md:text-right">
+                <p>© 2025 Nimverta AG. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+            
 </body>
 </html>
+
