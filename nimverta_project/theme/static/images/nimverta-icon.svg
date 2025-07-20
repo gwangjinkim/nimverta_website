@@ -1,0 +1,19 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#2E9A8E">
+    <title>Nimverta Bone Helix Logo</title>
+    
+    <!-- Bone Outline -->
+    <path d="M 10 30 
+             A 20 20 0 1 1 10 70 
+             C 40 90, 60 90, 90 70 
+             A 20 20 0 1 1 90 30 
+             C 60 10, 40 10, 10 30 
+             Z" />
+
+    <!-- Simplified Helix inside the bone, in a contrasting color (cutout effect) -->
+    <g fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round">
+        <!-- Strand 1 -->
+        <path d="M 30 35 C 45 55, 55 45, 70 65" />
+        <!-- Strand 2 -->
+        <path d="M 30 65 C 45 45, 55 55, 70 35" />
+    </g>
+</svg>
